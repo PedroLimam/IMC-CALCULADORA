@@ -20,19 +20,18 @@ button.addEventListener("click", function (e){
 
     const p1 = criaPessoa($weight, $stature2) 
     const calculateIndiceMassaCorporal = (p1.imc);
-    console.log(calculateIndiceMassaCorporal)
 
     if(calculateIndiceMassaCorporal < 18.0){
         resultado.textContent = "Tais medidas impossibilitam um resultado"
     }else if( calculateIndiceMassaCorporal > 18.0 && calculateIndiceMassaCorporal <= 24.99){
-        resultado.textContent = "Peso normal"
+        resultado.textContent = `${calculateIndiceMassaCorporal} - Peso normal` 
     }else if(calculateIndiceMassaCorporal >= 25.0 && calculateIndiceMassaCorporal <= 29.99){
-        resultado.textContent = "Sobrepeso"
+        resultado.textContent = `${calculateIndiceMassaCorporal} - Sobrepeso` 
     }else if(calculateIndiceMassaCorporal >= 30.0 && calculateIndiceMassaCorporal <= 34.99){
-        resultado.textContent = "Obesidade grau 1"
+        resultado.textContent = `${calculateIndiceMassaCorporal} - Obesidade grau 1`
     }else if(calculateIndiceMassaCorporal >= 35.0 && calculateIndiceMassaCorporal <= 39.99){
-        resultado.textContent = "Obesidade grau 2"
+        resultado.textContent = `${calculateIndiceMassaCorporal} - Obesidade grau 2`
     }else{
-        resultado.textContent = "Obesidade grau 3"
+        resultado.textContent = `${calculateIndiceMassaCorporal} - Obesidade grau 3`
     }
 })
